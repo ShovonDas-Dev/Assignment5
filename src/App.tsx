@@ -3,6 +3,7 @@
 import './index.css'
 import type { ITechItem } from './Type/TechItem'
 import Navber from "./Components/Navber"
+import HeroSection from './Components/HeroSection'
 
 function App() {
   const techData = async() : Promise<ITechItem> =>{
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       <Navber/>
-      
+      <HeroSection/>
     </>
   )
 }

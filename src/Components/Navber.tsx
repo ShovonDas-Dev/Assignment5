@@ -4,7 +4,7 @@ import hamburger from "../assets/hamburger.png"
 
 export default function Navbar() {
     return (
-        <nav className="w-full bg-white border-b border-gray-100 px-6 py-3.5">
+        <nav className=" container bg-white border-b border-gray-100 px-6 py-3.5">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
                 {/* Left: Logo Section */}
