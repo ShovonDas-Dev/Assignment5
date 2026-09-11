@@ -6,6 +6,7 @@ import Navber from "./Components/Navber"
 import HeroSection from './Components/HeroSection'
 import TechnologySection from './Components/TechnologySection'
 import { Suspense } from 'react'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   const techData = async() : Promise<ITechItem[]> =>{
@@ -18,6 +19,17 @@ function App() {
   
   return (
     <>
+    {/* Toast Container */}
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        closeOnClick={false}
+        pauseOnHover
+        draggable
+        theme="light"
+      />
+
       <Navber/>
       <HeroSection/>
       <Suspense fallback={<div className='text-center text-2xl font-bold text-gray-900'>Loading...</div>}>

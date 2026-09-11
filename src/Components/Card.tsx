@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import type { ITechItem } from '../Type/TechItem';
+import { toast } from "react-toastify";
 interface CardProps {
     tech: ITechItem;
     
@@ -7,8 +8,9 @@ interface CardProps {
 const Card = ({ tech } : CardProps ) => {
     const [isAdded, setIsAdded] = useState(false);
     const handleAddToStack = () => {
+         toast.success("Added to Stack!")
         setIsAdded(true);
-        
+
     };
   return (
     <div
