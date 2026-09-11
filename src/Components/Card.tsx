@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import type { ITechItem } from '../Type/TechItem';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
+
 interface CardProps {
     tech: ITechItem;
+    stackItems: ITechItem[];
+    setStackItems: React.Dispatch<React.SetStateAction<ITechItem[]>>;
     
 }
-const Card = ({ tech } : CardProps ) => {
+const Card = ({ tech, stackItems , setStackItems }: CardProps ) => {
     const [isAdded, setIsAdded] = useState(false);
-    const handleAddToStack = () => {
+    const handleAddToStack = (tech: ITechItem) => {
          toast.success("Added to Stack!")
         setIsAdded(true);
+        setStackItems([...stackItems, tech]);
+        
 
     };
   return (
@@ -61,7 +66,8 @@ const Card = ({ tech } : CardProps ) => {
           {/* Button */}
           <button 
             className={`mt-6 w-full rounded-md ${isAdded ? "bg-gray-100 border border-gray-300 text-black" : "bg-gray-950 text-white"} py-2 text-xs font-bold  transition-colors duration-300 hover:`}
-            onClick={() => handleAddToStack()}
+            disabled={isAdded}
+            onClick={() => handleAddToStack(tech)}
           >
             {isAdded ? "Added to Stack" : "Add to Stack"}
           </button>

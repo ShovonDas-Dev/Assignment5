@@ -8,6 +8,8 @@ import TechnologySection from './Components/TechnologySection'
 import { Suspense } from 'react'
 import { ToastContainer } from 'react-toastify'
 
+
+
 function App() {
   const techData = async() : Promise<ITechItem[]> =>{
     const response = await fetch("/data.json")

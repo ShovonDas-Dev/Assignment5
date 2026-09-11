@@ -1,4 +1,4 @@
-import { use } from "react"
+import { use, useState } from "react"
 import type { ITechItem } from "../Type/TechItem"
 import TechnologyCards from "./TechnologyCards";
 import TechnologyStack from "./TechnologyStack";
@@ -8,9 +8,14 @@ interface TechnologySectionProps {
 }
 
 const TechnologySection = ({ techPromise }: TechnologySectionProps) => {
-    console.log(techPromise);
+    
     const techData = use(techPromise)
     console.log(techData);
+
+    const [stackItems, setStackItems] = useState<ITechItem[]>([])
+    
+
+
   return (
     <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-20  '>
 
@@ -26,11 +31,11 @@ const TechnologySection = ({ techPromise }: TechnologySectionProps) => {
         <div className='grid grid-cols-12 gap-4 mt-8 justify-center '>
             {/* Technology cards */}
             <div className="col-span-9">
-                <TechnologyCards techData={techData} />
+                <TechnologyCards techData={techData} stackItems={stackItems} setStackItems={setStackItems} />
             </div>
             {/* Technology Stack */}
             <div className="col-span-3">
-                <TechnologyStack/>
+                <TechnologyStack stackItems={stackItems} />
             </div>
         </div>
 
