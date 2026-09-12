@@ -8,6 +8,7 @@ import TechnologySection from './Components/TechnologySection'
 import { Suspense } from 'react'
 import { ToastContainer } from 'react-toastify'
 import Footer from './Components/Footer'
+import { SyncLoader } from "react-spinners";
 
 
 
@@ -19,6 +20,8 @@ function App() {
   const techPromise = techData()
   
  
+
+
   
   return (
     <>
@@ -35,7 +38,7 @@ function App() {
 
       <Navber/>
       <HeroSection/>
-      <Suspense fallback={<div className='text-center text-2xl font-bold text-gray-900'>Loading...</div>}>
+      <Suspense fallback={<div className="flex justify-center  h-screen"><SyncLoader color="#6366f1" size={10} /></div>}>
         <TechnologySection techPromise={techPromise} />
       </Suspense>
       <Footer/>
