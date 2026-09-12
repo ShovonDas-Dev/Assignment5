@@ -1,78 +1,40 @@
-# React + TypeScript + Vite
+# 🚀 Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and interactive web application for exploring and managing different technologies and technology stacks in one place.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 https://dev-stack-red.vercel.app/
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- ⚛️ React
+- 📘 TypeScript
+- 🎨 Tailwind CSS
+- 🟢 Supabase
+- 🐙 GitHub
+- ⚡ Vite
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## ✨ Features
 
-## Expanding the ESLint configuration
+### 1. 🔍 Explore Technologies
+Browse different technologies with useful information such as their category, description, difficulty level, rating, and technology icon.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. 📚 Build Your Technology Stack
+Add your favorite technologies to your personal stack and manage the technologies you want to learn or use.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 3. 🔔 Interactive User Experience
+Enjoy a responsive and modern interface with interactive buttons, notifications, and smooth user interactions.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📸 Project Preview
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Visit the live project:
 
-```
+👉 https://dev-stack-red.vercel.app/
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## 👨‍💻 Developer
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Shovon Kumar Das**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+- GitHub: https://github.com/ShovonDas-Dev
+- LinkedIn: https://www.linkedin.com/in/shovonkumardas
