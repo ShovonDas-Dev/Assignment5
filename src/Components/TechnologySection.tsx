@@ -10,7 +10,6 @@ interface TechnologySectionProps {
 const TechnologySection = ({ techPromise }: TechnologySectionProps) => {
     
     const techData = use(techPromise)
-    console.log(techData);
 
     const [stackItems, setStackItems] = useState<ITechItem[]>([])
     
@@ -22,20 +21,20 @@ const TechnologySection = ({ techPromise }: TechnologySectionProps) => {
         
         {/* Technology Cards header */}
         <div>
-            <h1 className='text-3xl font-bold text-gray-900'>Explore the <span className='bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent'>Technologies</span></h1>
-            <p className='text-gray-600 mt-4 text-l'>Pick one technology per category to build your ideal stack.</p>
+            <h1 className='text-2xl md:text-3xl font-bold text-gray-900'>Explore the <span className='bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent'>Technologies</span></h1>
+            <p className='text-gray-600 mt-4 text-sm md:text-base'>Pick one technology per category to build your ideal stack.</p>
         </div>
 
 
         {/* Technology section */}
-        <div className='grid grid-cols-12 gap-4 mt-8 justify-center '>
+        <div className='grid md:grid-cols-12 gap-4 mt-8 justify-center '>
             {/* Technology cards */}
-            <div className="col-span-9">
+            <div className="col-span-12 md:col-span-9">
                 <TechnologyCards techData={techData} stackItems={stackItems} setStackItems={setStackItems} />
             </div>
             {/* Technology Stack */}
-            <div className="col-span-3">
-                <TechnologyStack stackItems={stackItems} />
+            <div className="col-span-12 md:col-span-3">
+                <TechnologyStack stackItems={stackItems} setStackItems={setStackItems} />
             </div>
         </div>
 

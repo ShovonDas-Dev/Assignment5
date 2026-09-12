@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import type { ITechItem } from '../Type/TechItem';
 import { toast } from 'react-toastify';
 
@@ -9,14 +9,21 @@ interface CardProps {
     
 }
 const Card = ({ tech, stackItems , setStackItems }: CardProps ) => {
-    const [isAdded, setIsAdded] = useState(false);
-    const handleAddToStack = (tech: ITechItem) => {
-         toast.success("Added to Stack!")
-        setIsAdded(true);
-        setStackItems([...stackItems, tech]);
-        
+    console.log(stackItems);
+    console.log(tech);
+    const isTechInStack = stackItems.some((item) => item.id === tech.id);
+    
 
+    const handleAddToStack = (tech: ITechItem) => {
+      if (isTechInStack) {
+        toast.warn(`${tech.name} is already added to your stack!`);
+        return;
+      }
+
+         toast.success("Added to Stack!")
+        setStackItems([...stackItems, tech]);
     };
+
   return (
     <div
           key={tech.id}
@@ -65,11 +72,10 @@ const Card = ({ tech, stackItems , setStackItems }: CardProps ) => {
 
           {/* Button */}
           <button 
-            className={`mt-6 w-full rounded-md ${isAdded ? "bg-gray-100 border border-gray-300 text-black" : "bg-gray-950 text-white"} py-2 text-xs font-bold  transition-colors duration-300 hover:`}
-            disabled={isAdded}
-            onClick={() => handleAddToStack(tech)}
+            className={`mt-6 w-full rounded-md ${isTechInStack ? "bg-gray-100 border border-gray-300 text-black" : "bg-gray-950 text-white"} py-2 text-xs font-bold  transition-colors duration-300 hover:`}
+            onClick={() => handleAddToStack(tech) }
           >
-            {isAdded ? "Added to Stack" : "Add to Stack"}
+            {isTechInStack ? "Added to Stack" : "Add to Stack"}
           </button>
         </div>
   )

@@ -7,6 +7,7 @@ import HeroSection from './Components/HeroSection'
 import TechnologySection from './Components/TechnologySection'
 import { Suspense } from 'react'
 import { ToastContainer } from 'react-toastify'
+import Footer from './Components/Footer'
 
 
 
@@ -37,6 +38,7 @@ function App() {
       <Suspense fallback={<div className='text-center text-2xl font-bold text-gray-900'>Loading...</div>}>
         <TechnologySection techPromise={techPromise} />
       </Suspense>
+      <Footer/>
     </>
   )
 }

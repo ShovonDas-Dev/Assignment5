@@ -37,10 +37,10 @@ export default function Navbar() {
 
 
                 <div className="flex items-center gap-4">
-                    <button className="text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors px-3 py-2">
+                    <button className="text-xs md:text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors px-2 py-1 md:px-3 md:py-2">
                         Sign In
                     </button>
-                    <button className="text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 transition-colors px-5 py-2 rounded-full shadow-sm">
+                    <button className="text-xs md:text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 transition-colors px-5 py-2 rounded-full shadow-sm">
                         Sign Up
                     </button>
                 </div>
