@@ -124,7 +124,7 @@
     "name": "GitHub",
     "category": "Tools",
     "description": "A platform for hosting code repositories and collaborating on software development projects.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Github.svg",
+    "icon": "https://cdn.simpleicons.org/github",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
@@ -154,7 +154,7 @@
     "name": "Supabase",
     "category": "Backend",
     "description": "An open-source backend platform providing PostgreSQL database, authentication, storage, and APIs.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Supabase.svg",
+    "icon": "https://cdn.simpleicons.org/supabase",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Modern"

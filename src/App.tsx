@@ -8,7 +8,9 @@ import TechnologySection from './Components/TechnologySection'
 import { Suspense } from 'react'
 import { ToastContainer } from 'react-toastify'
 import Footer from './Components/Footer'
-import { SyncLoader } from "react-spinners";
+import { SyncLoader } from 'react-spinners'
+
+
 
 
 
