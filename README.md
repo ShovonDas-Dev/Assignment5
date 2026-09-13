@@ -11,7 +11,6 @@ A modern and interactive web application for exploring and managing different te
 - ⚛️ React
 - 📘 TypeScript
 - 🎨 Tailwind CSS
-- 🟢 Supabase
 - 🐙 GitHub
 - ⚡ Vite
 
